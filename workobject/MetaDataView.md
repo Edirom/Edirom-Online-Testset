@@ -5,7 +5,7 @@ $uri := request:get-parameter('uri', '')
 
 $type := request:get-parameter('type', '')
 ```
-## Dateiinformation
+## Datainformation
 ```
 mei:titleStmt
 ```
