@@ -1,4 +1,10 @@
 # getSummary.xql
+parameters:
+```
+$uri := request:get-parameter('uri', '')
+
+$type := request:get-parameter('type', '')
+```
 ## Persons
 ```
 for $resp in $doc//mei:work/mei:titleStmt/mei:respStmt/mei:*[not(local-name() eq 'resp') and @role]

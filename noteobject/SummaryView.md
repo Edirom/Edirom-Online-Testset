@@ -1,4 +1,10 @@
 # getSummary.xql
+parameters:
+```
+$uri := request:get-parameter('uri', '')
+
+$type := request:get-parameter('type', '')
+```
 ## Title
 ```
 if($doc//mei:source/mei:titleStmt/mei:title[@type eq 'main'])

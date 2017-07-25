@@ -1,4 +1,10 @@
 # getSummary.xql
+parameters:
+```
+$uri := request:get-parameter('uri', '')
+
+$type := request:get-parameter('type', '')
+```
 ## Title
 ```
 $doc//tei:titleStmt/tei:title[1]/text()
