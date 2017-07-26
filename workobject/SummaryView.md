@@ -1,5 +1,5 @@
 # getSummary.xql
-parameters:
+input parameters:
 ```
 $uri := request:get-parameter('uri', '')
 
@@ -35,7 +35,7 @@ label:
 ```
 $expression/string(@label)
 ```
-manifestations:
+in manifestations:
 ```			 
 for $source in //mei:relation[@target = $target and @rel =‚isEmbodimentOf']/root()
 ```

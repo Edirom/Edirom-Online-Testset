@@ -1,5 +1,5 @@
 # getHeader.xql -> meiHead2HTML.xsl
-parameters:
+input parameters:
 ```
 $uri := request:get-parameter('uri', '')
 

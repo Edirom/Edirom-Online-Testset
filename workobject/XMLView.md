@@ -1,20 +1,20 @@
 # getXml.xql
-parameters:
+input parameters:
 ```
 $uri := request:get-parameter('uri', '')
 
 $internalId := request:get-parameter('internalId', '')
 ```
 ## XML Code
-doc:
+$doc:
 ```
 eutil:getDoc($uri)/root()
 ```
-internal:
+$internal:
 ```
 $doc/id($internalId)
 ```
-xml:
+xml code:
 ```
  if(exists($internal))  then($internal)  else($doc)
 ```
