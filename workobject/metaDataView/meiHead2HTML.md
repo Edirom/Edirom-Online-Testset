@@ -24,7 +24,7 @@ Titlename:
 ```
 <xsl:apply-templates select="mei:titleStmt"/>
 ```
-Identifier:
+Identifiers:
 ```
 <xsl:if test="count(mei:identifier) gt 0">
 	<xsl:element name="div">
@@ -51,7 +51,7 @@ Classification:
 ```
 <xsl:apply-templates select="mei:classification"/>
 ```
-### Workdetails
+### Work Details
 ```
 <xsl:with-param name="key" select="eof:getLabel('additionalMeta')"/>
 ```
@@ -63,7 +63,7 @@ History:
 ```
 <xsl:apply-templates select="mei:history"/>
 ```
-### Musikalische Informationen
+### Musical Informations
 ```
 <xsl:value-of select="eof:getLabel('musicalInfo')"/>
 ```
@@ -73,7 +73,7 @@ History:
 	<xsl:apply-templates select="mei:key | mei:meter | mei:perfMedium | mei:castList | mei:componentGrp"/>
 </xsl:element>
 ```   
-### Reihe 
+### Series
 ```  
 <xsl:value-of select="eof:getLabel('series')"/>
 ```

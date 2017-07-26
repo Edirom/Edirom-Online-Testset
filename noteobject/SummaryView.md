@@ -1,22 +1,25 @@
 # getSummary.xql
-parameters:
+## Input parameters:
 ```
 $uri := request:get-parameter('uri', '')
 
 $type := request:get-parameter('type', '')
+
+$imagePrefix := eutil:getPreference('image_prefix', request:get-parameter('edition', ''))
 ```
-## Title
+## Following Informations as HTML text are shown:
+### Title
 ```
 if($doc//mei:source/mei:titleStmt/mei:title[@type eq 'main'])
  then($doc//mei:source/mei:titleStmt/mei:title[@type eq 'main'][1]//text())
  else($doc//mei:source/mei:titleStmt/mei:title[1]//text())
 ```
-## Identifiers
+### Identifiers
 ```
 if($doc//mei:source//mei:identifier[@type eq 'siglum']) then(concat(' ', $doc//mei:source//mei:identifier[@type eq ‚siglum'][1]//text()))
 ```
 
-## Extension
+### Extension
 Zur Fassung "
 ```
 {$expression}
@@ -30,7 +33,7 @@ Zur Fassung "
 {$title}
 ```
 ".
-## Persons
+### Persons
 ```
 for $name in $doc//mei:source/mei:titleStmt/mei:respStmt/mei:*[local-name() eq 'persName' or local-name() eq ‚name']
 ```
@@ -42,11 +45,11 @@ name:
 ```
 $name/text()
 ```
-## Datas
+### Datas
 ```
 for $date in $doc//mei:source/mei:pubStmt/mei:date | $doc//mei:source/mei:history/mei:creation/mei:date[1]
 ```
-## Manuscripts
+### Manuscripts
 ```
 count($doc//mei:source/mei:itemList/mei:item) eq 1
 ```
@@ -54,7 +57,7 @@ manuscript:
 ```
 $item/mei:physDesc/mei:repository[1]/text(), if($item/mei:physDesc/mei:physLoc) then(<br/>,$item/mei:physDesc/mei:physLoc[1]/text())
 ```
-## Publisher
+### Publisher
 ```
 if($doc//mei:source/mei:pubStmt//mei:*[@role eq ‚publisher'])
 ```
@@ -62,7 +65,7 @@ name:
 ```
 $doc//mei:source/mei:pubStmt//mei:*[@role eq ‚publisher'][1]/text()
 ```
-## Plate Number
+### Plate Number
 ```
 if($doc//mei:source/mei:physDesc/mei:plateNum)
 ```
@@ -70,7 +73,7 @@ number:
 ```
 $doc//mei:source/mei:physDesc/mei:plateNum[1]/text()
 ```
-## Facsimile Path
+### Facsimile Path
 ```
 if($doc//mei:source//mei:titlePage/@facs)
 ```
