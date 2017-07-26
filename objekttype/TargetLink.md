@@ -1,9 +1,10 @@
 # getTargetLink.xql
-parameters:
+## Input parameters:
 ```
 $uri := request:get-parameter('uri', '')
 ```
-## Object Type
+## Show following data informations
+### Object Type
 work:
 ```
 if(exists($doc//mei:mei) and exists($doc//mei:work))
@@ -24,7 +25,7 @@ html:
 ```
 if(exists($doc/html)
 ```
-## Title
+### Title for object
 work:
 ```
 $doc//mei:work/mei:titleStmt)[1]/data(mei:title[1])
@@ -45,7 +46,7 @@ html
 ```
 $doc//head/data(title)
 ```
-## Viewers for Objects
+### Viewers for Objects
 HeaderView
 ```
 if($doc//mei:meiHead or $doc//tei:teiHeader)
@@ -90,7 +91,7 @@ SourceDescriptionView
 ```
 if($doc//mei:annot[@type=‚descLink'])
 ```
-## Doc-uri with Parameters
+### Doc-uri with Parameters
 InternalID:
 ```
 if(contains($uri, ‚#‘))
