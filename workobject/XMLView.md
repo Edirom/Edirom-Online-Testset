@@ -1,11 +1,11 @@
 # getXml.xql
-input parameters:
+### Input parameters:
 ```
 $uri := request:get-parameter('uri', '')
 
 $internalId := request:get-parameter('internalId', '')
 ```
-## XML Code
+### XML Code
 $doc:
 ```
 eutil:getDoc($uri)/root()

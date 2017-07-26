@@ -1,5 +1,5 @@
 # getText.xql
-### Input parameters:
+## Input parameters:
 ```
 $uri := request:get-parameter('uri', '')
  $idPrefix := request:get-parameter('idPrefix', '') 
@@ -8,7 +8,7 @@ $path := request:get-parameter('path', '') 
 $page := request:get-parameter('page', '')
 $imagePrefix := eutil:getPreference('image_prefix', request:get-parameter('edition', ''))
 ```
-
+## HTML Text
 ### Following steps are executed:
 1. overwrite $doc with reduceToPage.xsl:
 ```

@@ -1,11 +1,14 @@
 # getSummary.xql
-input parameters:
+## Input parameters:
 ```
 $uri := request:get-parameter('uri', '')
 
 $type := request:get-parameter('type', '')
+
+$imagePrefix := eutil:getPreference('image_prefix', request:get-parameter('edition', ''))
 ```
-## Persons
+## Following Informations as HTML text are shown:
+### Persons
 ```
 for $resp in $doc//mei:work/mei:titleStmt/mei:respStmt/mei:*[not(local-name() eq 'resp') and @role]
 ```
@@ -17,17 +20,17 @@ name:
 ```
 $resp/text()
 ```
-## Title
+### Title
 ```
 if($doc//mei:work/mei:titleStmt/mei:title[@type eq 'main'])
  then($doc//mei:work/mei:titleStmt/mei:title[@type eq 'main'][1]//text())
  else($doc//mei:work/mei:titleStmt/mei:title[1]//text())
 ```
-## Identifiers
+### Identifiers
 ```
 for $ident in $doc//mei:work/mei:identifier
 ```
-## Expressions
+### Expressions
 ```
 for $expression in $doc//mei:work/mei:expressionList/mei:expression
 ```
