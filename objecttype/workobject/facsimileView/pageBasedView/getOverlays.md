@@ -4,7 +4,7 @@
 $uri := request:get-parameter('uri', '')
 ```
 ## Show following data informations
-### For each overlay in mei:annot[@type = 'overlay']:
+For each overlay in mei:annot[@type = 'overlay']:
 1. ID:
 ```
 $overlay/string(@xml:id)

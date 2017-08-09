@@ -1,4 +1,4 @@
-# getAnnotationInfos.xql
+### getAnnotationInfos.xql
 ## Input parameters:
 ```
 $uri := request:get-parameter('uri', '')
@@ -26,4 +26,8 @@ $priority in Priorities
 ```
 (collection(eutil:getPreference('edition_path', request:get-parameter('edition', '')))//id($priority))[1]/mei:name/text()  ```
             
+
+
+
+
 

@@ -11,6 +11,5 @@
 <!-- FREIDI PARAMETER -->
 <xsl:param name="textType"/>
 ```
-## Following informations as HTML text are shown
-Show all information from tei:text/tei:body.
+## Show all information as HTML from tei:text/tei:body.
 

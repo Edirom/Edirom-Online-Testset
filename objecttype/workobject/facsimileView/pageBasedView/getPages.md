@@ -4,7 +4,7 @@
 $uri := request:get-parameter('uri', '')
 ```
 ## Show following data informations
-### For MEI-Forma
+### For MEI-Format
 For each mei:surface:
 
 1. Facsimile:

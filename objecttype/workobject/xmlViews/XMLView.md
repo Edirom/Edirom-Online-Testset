@@ -5,7 +5,7 @@ $uri := request:get-parameter('uri', '')
 
 $internalId := request:get-parameter('internalId', '')
 ```
-### XML Code
+### XML code for 'XML Quelle' view and 'XML Text' view 
 $doc:
 ```
 eutil:getDoc($uri)/root()

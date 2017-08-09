@@ -1,22 +1,18 @@
-# getOverlays.xql
+# getMovements.xql
 ## Input parameters:
 ```
 $uri := request:get-parameter('uri', '')
 ```
 ## Show following data informations
-### For each overlay in mei:annot[@type = 'overlay']:
+For each movement in mei:mdiv:
 1. ID:
 ```
-$overlay/string(@xml:id)
+$movement/string(@xml:id)
 ```
 
 2. Name:
 ```
-$overlay/mei:title
+$movement/string(@label)
 ```
 
-
-
-
- 
 
