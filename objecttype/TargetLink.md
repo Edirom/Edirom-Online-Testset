@@ -67,7 +67,7 @@ VerovioView
 ```
 if($doc//mei:body//mei:measure and $doc//mei:body//mei:note)
 ```
-TextView
+TextView: 
 ```
 if($doc//tei:body[matches(.//text(), '[^\s]+')])
 ```
@@ -91,6 +91,8 @@ SourceDescriptionView
 ```
 if($doc//mei:annot[@type=‚descLink'])
 ```
+XmlView for all object types
+
 ### Doc-uri with Parameters
 InternalID:
 ```
@@ -111,4 +113,10 @@ InternalIdType:
 ```
 if(exists($internal))
 ```
+## Conditions
+Following views are primarily loaded depended from object type:
+TextView is default for text objects
+SourceView is default for source objects
+AudioView is default for audio objects
+AnnotationView is default for annotation objects (?)
 
