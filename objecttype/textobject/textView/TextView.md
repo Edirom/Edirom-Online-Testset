@@ -6,11 +6,12 @@ $uri := request:get-parameter('uri', '')
 $term := request:get-parameter('term', '') 
 $path := request:get-parameter('path', '') 
 $page := request:get-parameter('page', '')
+
 $imagePrefix := eutil:getPreference('image_prefix', request:get-parameter('edition', ''))
 ```
 
 ## Following steps are executed:
-1. overwrite $doc with reduceToPage.xsl:
+1. overwrite $doc with [reduceToPage](../../../transformations/getText/text/reduceToPage.md):
 ```
 if($page eq '')
 then($doc)
@@ -32,7 +33,7 @@ return
 	then(substring-before(substring-after($i, 'href="'), '"'))
 	else()
 ```
-3. $xsl depend from \$xslInstruction, trasform with teiBody2HTML.xsl:
+3. $xsl depend from \$xslInstruction, trasform with  [teiBody2HTML](../../../transformations/getText/text/teiBody2HTML.md):
 ```
 if($xslInstruction)then($xslInstruction)else('../xslt/teiBody2HTML.xsl')
 ```
@@ -42,7 +43,7 @@ if($xslInstruction)
 then(transform:transform($doc, doc($xsl), <parameters>{$params}</parameters>))
 else(transform:transform($doc, doc($xsl), <parameters>{$params}<param name="graphicsPrefix" value="{$imagePrefix}"/></parameters>))
 ```
-5. transform doc with edirom_idPrefix.xsl
+5. transform doc with   [edirom_idPrefix](../../../transformations/getText/text/edirom_idPrefix.md):
 ```
 transform:transform($doc, doc('../xslt/edirom_idPrefix.xsl'), <parameters><param name="idPrefix" value="{$idPrefix}"/></parameters>) ```
 

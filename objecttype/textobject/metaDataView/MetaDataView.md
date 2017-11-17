@@ -8,9 +8,10 @@ $type := request:get-parameter('type', '')
 $lang := request:get-parameter('lang', 'de')
 ```
 ## HTML Text
-Tranform with teiHeader2HTML.xsl:
+
+Tranform with [teiHeader2HTML](../../../transformations/getHeader/text/teiHeader2HTML.md):
 ```
-transform:transform($doc, concat($base, 'meiHead2HTML.xsl'), 
+transform:transform($doc, concat($base, 'teiHead2HTML.xsl'), 
 <parameters><param name="base" value="{$base}"/>
 <param name="lang" value="{$lang}"/></parameters>)
 ```
