@@ -1,4 +1,8 @@
 # getWorkID.xql
+###  Conditions
+
+1. First defined work will be returned.
+2. xml:id attribute is mandatory in work in edition file.
 ### Input parameters:
 ```
 $uri := request:get-parameter('uri', '')
@@ -22,10 +26,7 @@ work.xqm:
 ```
 doc($uri)//edirom:work[1]/data(@xml:id)
 ```
-###  Conditions
 
-1. First defined work will be returned.
-2. xml:id attribute is mandatory in work in edition file.
 
 
 

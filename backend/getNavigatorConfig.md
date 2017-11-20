@@ -1,4 +1,6 @@
 # getNavigatorConfig.xql
+### Conditions
+Show items so than they ordered in edition file, no @sortNo attribute is used.
 ### Input parameters:
 ```
 $editionId := request:get-parameter('editionId', '')
@@ -71,7 +73,6 @@ navigatorCategory:
 }
 </div>
 ```
-### Conditions
-Show items so than they ordered in edition file, no @sortNo attribute is used.
+
 
 

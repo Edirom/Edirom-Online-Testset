@@ -1,4 +1,10 @@
 # getTargetLink.xql
+## Conditions
+Following views are primarily loaded depended from object type:
+TextView is default for text objects
+SourceView is default for source objects
+AudioView is default for audio objects
+AnnotationView is default for annotation objects (?)
 ## Input parameters:
 ```
 $uri := request:get-parameter('uri', '')
@@ -113,10 +119,5 @@ InternalIdType:
 ```
 if(exists($internal))
 ```
-## Conditions
-Following views are primarily loaded depended from object type:
-TextView is default for text objects
-SourceView is default for source objects
-AudioView is default for audio objects
-AnnotationView is default for annotation objects (?)
+
 

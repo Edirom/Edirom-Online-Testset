@@ -1,4 +1,5 @@
 # getLanguageFile.xql
+
 ### Input parameters:
 ```
 $lang := request:get-parameter('lang', '')
@@ -48,6 +49,6 @@ for $entry in $projectFile//entry
 return
 	concat('"', $entry/string(@key), '":"', $entry/string(@value), '"')
 ```
-### Key definitions:
+### Key definitions example:
 for example show ../locale/edirom-lang-"$lang".xml
 

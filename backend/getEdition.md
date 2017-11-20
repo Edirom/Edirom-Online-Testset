@@ -1,4 +1,6 @@
 # getEdition.xql
+### Conditions
+xml:id for edition and editionName in edition file are optional.
 ### Input parameters:
 ```
 $uri := request:get-parameter('id', '')
@@ -23,6 +25,5 @@ return:
 'doc: "', $uri, '", ',
 'name: "', $edition/edirom:editionName, '"'
 ```
-### Conditions
-xml:id for edition and editionName in edition file are optional.
+
 

@@ -14,4 +14,11 @@ transform:transform($doc, concat($base, 'meiHead2HTML.xsl'),
 <parameters><param name="base" value="{$base}"/>
 <param name="lang" value="{$lang}"/></parameters>)
 ```
+## Example
+
+[Example XML](test/TestXMLHeader.md)
+
+[Generated HTML Result](test/TestXMLHeaderResult.md)
+
+[Text View Screenshot](test/MetaDataView.md)
 

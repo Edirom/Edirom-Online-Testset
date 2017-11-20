@@ -1,4 +1,6 @@
 # getWorks.xql
+### Conditions:
+Only first title for work will be returned/shown.
 ### Input parameters:
 ```
 $uri := request:get-parameter('id', '')
@@ -35,8 +37,7 @@ return:
 'title: "', $work//mei:workDesc/mei:work/mei:titleStmt/replace(mei:title[1], '"', '\\"'), '"'
 ```
 
-### Conditions:
-Only first title for work will be returned/shown.
+
 
 
 
