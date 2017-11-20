@@ -1,0 +1,2 @@
+![](media/NavigatorConfig.png)
+
