@@ -64,7 +64,7 @@ Show items so than they ordered in edition file, no @sortNo attribute is used.
 
  [Example XML](TestXMLNavigatorConfig.md)
 
- [Generated HTML Result](TestXMLNavigatorConfig.md)
+ [Generated HTML Result](TestXMLNavigatorConfigResult.md)
 
  [Navigator Screenshot](NavigatorConfig.md)
 
