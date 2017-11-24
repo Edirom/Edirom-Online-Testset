@@ -47,4 +47,11 @@ else(transform:transform($doc, doc($xsl), <parameters>{$params}<param name="grap
 ```
 transform:transform($doc, doc('../xslt/edirom_idPrefix.xsl'), <parameters><param name="idPrefix" value="{$idPrefix}"/></parameters>) ```
 
+## Example
+
+[Example XML](test/TestXMLTextView.md)
+
+[Generated HTML Result](test/TestXMLTextViewResult.md)
+
+[Text View Screenshot](test/TextView.md)
 

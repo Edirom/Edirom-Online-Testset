@@ -18,4 +18,10 @@ xml:
 ```
  if(exists($internal))  then($internal)  else($doc)
 ```
+## Example
+
+[Example XML](../textView/test/TestXMLTextView.md)
+
+[XML View Screenshot](test/XMLView.md)
+
 

@@ -69,9 +69,18 @@ replace($graphic/string(@width), 'px', '')
 ```
 replace($graphic/string(@height), 'px', '')
 ```
-                
 
-
+## Example
+XML:
+``` 
+<surface xml:id="edirom_surface_d9e3eead-c3a9" n="I">
+	<graphic target="h-moll/source_P_180/P_180_002.jpg" xml:id="graphic_facsimile-P_180_002" type="facsimile" width="772" height="1200" label="002"/>
+</surface>
+``` 
+JSON Result/Output: 
+```            
+id: "edirom_surface_d9e3eead-c3a9", path: "h-moll/source_P_180/P_180_002.jpg", name: "I", width: "772", height: "1200"}
+```
 
 
 

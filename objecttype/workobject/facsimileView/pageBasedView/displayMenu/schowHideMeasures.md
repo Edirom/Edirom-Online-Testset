@@ -67,3 +67,18 @@ $mei/id($zoneId)/string(@lrx)
 $mei/id($zoneId)/string(@lry)
 ``` 
 
+## Example
+XML:
+```
+... 
+ <zone xml:id="edirom_zone_d7b4c488-2db0" type="measure" ulx="18" uly="33" lrx="171" lry="577"/>
+ ...
+ <measure xml:id="edirom_measure_20267352-3a5a" n="11" facs="#edirom_zone_d7b4c488-2db0"/>
+ ...
+``` 
+JSON Result/Output: 
+```            
+{zoneId: "edirom_zone_d7b4c488-2db0", ulx: "18", uly: "33", lrx: "171", lry: "577", id: "edirom_measure_20267352-3a5a", name: "11", type: "", rest: "0"}
+```
+
+

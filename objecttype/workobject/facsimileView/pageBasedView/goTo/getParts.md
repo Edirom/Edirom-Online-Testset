@@ -20,3 +20,24 @@ $part/@xml:id
 
 4. selected: true
 
+## Example
+### Parameter
+![](media/15115265453053.jpg)
+
+### XML
+```
+...
+<perfMedium>
+	<instrumentation>
+		<instrVoice label="Score" xml:id="score"/>
+		<instrVoice label="Duo Voces Articuli" xml:id="duoVoce"/>
+	</instrumentation>
+</perfMedium>
+...
+```
+### result JSON
+```
+{label: "Score", id:"score", selectedByDefault:true, selected:true},{label: "Duo Voces Articuli", id:"duoVoce", selectedByDefault:true, selected:true}
+```
+
+
