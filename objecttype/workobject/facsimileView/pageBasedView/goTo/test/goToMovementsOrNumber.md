@@ -1,28 +1,6 @@
-# getMovementsFirstPage.xql
-## Input parameters:
-```
-$uri := request:get-parameter('uri', '')
- $movementId := request:get-parameter('movementId', '')
-```
-## Show following data informations
-mei:
-```
-doc($uri)/root()
-```
-zoneId:
-```
-($mei/id($movementId)//mei:measure)[1]/string(@facs)
- let $zoneId := if(starts-with($zoneId, '#'))
-then(substring($zoneId, 2))
-else($zoneId)
-```
-movements on first page:
-```
-$mei/id($zoneId)/parent::mei:surface/string(@xml:id)
-```
 ## Example
 ### Parameter
-![](media/15117636341773.jpg)
+![](../media/15117636341773.jpg)
 
 ### XML
 ```
@@ -44,7 +22,10 @@ $mei/id($zoneId)/parent::mei:surface/string(@xml:id)
 ```
 edirom_surface_0a04f778-f0a0
 ```
-![](media/15117647811571.jpg)
+![](../media/15117647811571.jpg)
+
+
+
 
 
 

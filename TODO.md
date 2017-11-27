@@ -10,3 +10,9 @@
 
 8. objecttype: workobject/pageBasedView/AnnotationsMenu: priorities, categories
 
+9. objecttype: workobject/pageBasedView/displayMenu: layers
+10.  objecttype: workobject/measureBasedView/displayMenu: layers
+11. objecttype: workobject/sure/AnnotationsMenu: priorities, categories
+12. objecttype/workobject/facsimileView/measureBasedView/partSelection: not working or bad example
+
+

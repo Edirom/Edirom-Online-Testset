@@ -1,69 +1,79 @@
-# getMeasurePage.xql
+# getMeasuresOnPage.xql
 ## Input parameters:
 ```
-$id := request:get-parameter('id', '')
-
-$measureIdName := request:get-parameter('measure', '')
-
-$movementId := request:get-parameter('movementId', '')
-
-$measureCount := request:get-parameter('measureCount', '1')
+$uri := request:get-parameter('uri', '')
+ 
+$surfaceId := request:get-parameter('pageId', '')
 ```
 ## Show following data informations
-for measure with $measureIdName
+for each measure
+                         'rest: "', local:getMRest($measure), '"',
 
-1. measureId:
+1. zoneId:
+```
+$zone/string(@xml:id)
+```
+
+2. ulx:
+```
+$zone/string(@ulx)
+```
+
+3. uly:
+```
+$zone/string(@uly)
+```
+
+4. lrx:
+```
+$zone/string(@lrx)
+```
+
+5. lry:
+```
+$zone/string(@lry)
+```
+
+6. id:
 ```
 $measure/string(@xml:id)
 ```
 
-2. zoneId:
+7. name:
 ```
-substring-after($measure/string(@facs), '#')
-```
-
-3. pageId:
-```
-let $zoneId := substring-after($measure/string(@facs), '#')
-let $zone := $mei/id($zoneId)
-let $surface := $zone/parent::mei:surface
-```
-```
-$surface/string(@xml:id)
+$measure/string(@n)
 ```
 
-4. path:
+8. type:
 ```
-$surface/mei:graphic[@type='facsimile']/string(@target)
-```
-
-5. width:
-```
-$surface/mei:graphic[@type='facsimile']/string(@width)
+$measure/string(@type)
 ```
 
-6. height:
+9. rest:
 ```
-$surface/mei:graphic[@type='facsimile']/string(@height)
-```
-
-7. ulx:
-```
-$mei/id($zoneId)/string(@ulx)
-```
-
-8. uly:
-```
-$mei/id($zoneId)/string(@uly)
+if($measure//mei:mRest)
+then(string('1'))
+else 
+	if($measure//mei:multiRest)
+	then($measure//mei:multiRest/string(@num))
+	else(string('0'))
 ```
 
-9. lrx:
-```
-$mei/id($zoneId)/string(@lrx)
-```
+## Example
+### Parameter
+![](../media/15117659352816.jpg)
 
-10. lry:
+### XML
 ```
-$mei/id($zoneId)/string(@lry)
-``` 
+<surface xml:id="edirom_surface_161cd838-cdcb" n="1">                 <graphic target="h-moll/source_P_180/P_180_003.jpg" xml:id="graphic_facsimile-P_180_003" type="facsimile" width="769" height="1200" label="003"/>                 <zone xml:id="edirom_zone_d557a0e0-ce2c" type="measure" ulx="111" uly="70" lrx="281" lry="654"/>
+```
+### Result
+```
+{zoneId: "edirom_zone_d557a0e0-ce2c", ulx: "111", uly: "70", lrx: "281", lry: "654", id: "edirom_measure_8ed5a31e-5f94", name: "1", type: "", rest: "0"}
+...
+```
+![](media/15117717742606.jpg)
+
+
+
 
