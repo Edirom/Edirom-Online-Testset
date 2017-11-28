@@ -63,5 +63,26 @@ $measure/@xml:id
 ```
 [{id:"', $measure/@xml:id, '", voice: "score"}]
 ```
+## Example
+### Parameter
+![](media/15118661303441.jpg)
+### XML
+```
+...
+ <mdiv xml:id="edirom_mdiv_47c7bd29-4035-4371-bf5a-85dc9050429b" label="1. Kyrie I">
+ 	<parts>
+ 		<part xml:id="d1e30318" label="B1 Soprano I">
+ 			<staffDef decls="#instr_sop1"/>
+ 			<section>
+ 				<measure n="1" xml:id="edirom_measure_656c3096-f3d1-403f-bc97-4a27f7b0c9b3" facs="#edirom_zone_0d34644b-fe61-4f2c-85d3-886cd9222632"/>
+ ...  ```  
+                          
+### Result Fragment
+```
+[{id: "measure_edirom_mdiv_47c7bd29-4035-4371-bf5a-85dc9050429b_1", 
+measures: [{id:"edirom_measure_656c3096-f3d1-403f-bc97-4a27f7b0c9b3", voice: "#instr_sop1"},...
+```
+
+
 
 

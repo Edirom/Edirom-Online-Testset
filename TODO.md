@@ -14,5 +14,7 @@
 10.  objecttype: workobject/measureBasedView/displayMenu: layers
 11. objecttype: workobject/sure/AnnotationsMenu: priorities, categories
 12. objecttype/workobject/facsimileView/measureBasedView/partSelection: not working or bad example
+13. annotationobject: openAllSources/getAnnotationInfos: priorities, categories
+14. annotationobject: openAllSources/getOverlays
 
 

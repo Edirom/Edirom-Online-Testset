@@ -69,7 +69,24 @@ replace($graphic/string(@width), 'px', '')
 ```
 replace($graphic/string(@height), 'px', '')
 ```
+
+### Example
+#### Parameter
+![](media/15118621309046.jpg)
+#### XML
+```
+...
+<surface n="2" xml:id="surface-2-d4e2">
+	<graphic target="h-moll/edition/Neusatz_s002.jpg" xml:id="graphic-2-d4e2" type="facsimile" width="2976" height="3838" label="2"/>
+...
                 
+```
+
+#### Result Fragment JSON
+
+```
+{id: "surface-2-d4e2", path: "h-moll/edition/Neusatz_s002.jpg", name: "2", width: "2976", height: "3838"}
+```
 
 
 
