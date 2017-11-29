@@ -20,6 +20,25 @@ $part/@xml:id
 
 4. selected: true
 
+## Example
+### Parameter
+![](../../../workobject/facsimileView/measureBasedView/media/15117691331620.jpg)
+
+### XML
+```
+...
+<part xml:id="score13" label="Score">
+	<staffDef decls="#score"/>
+...
+<part xml:id="score12a" label="Duo Voces Articuli">
+	<staffDef decls="#duoVoce"/>
+...                 
+```
+### JSON Result
+```
+{label: "Score", id:"score", selectedByDefault:true, selected:true},
+{label: "Duo Voces Articuli", id:"duoVoce", selectedByDefault:true, selected:true}
+```
 
 
 
