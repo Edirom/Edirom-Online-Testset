@@ -66,6 +66,24 @@ $mei/id($zoneId)/string(@lrx)
 ```
 $mei/id($zoneId)/string(@lry)
 ``` 
+## Example
+### Parameter
+![](media/15119452103597.jpg)
+
+### XML
+```
+...
+<surface n="3" xml:id="surface-2-d4e8">                 <graphic target="h-moll/edition/Neusatz_s003.jpg" xml:id="graphic-2-d4e8" type="facsimile" width="2976" height="3838" label="3"/> ...
+<zone xml:id="zone-2-d4e11" type="measure" ulx="718" uly="192" lrx="1266" lry="1954"/>
+...
+<measure xml:id="measure-2-d4e11" n="6" facs="#zone-2-d4e11"/>
+...
+```
+
+### Result
+```
+{measureId:"measure-2-d4e11",zoneId:"zone-2-d4e11",pageId:"surface-2-d4e8", movementId:"mdiv-2-d3",path: "h-moll/edition/Neusatz_s003.jpg", width: "2976", height: "3838", ulx: "718", uly: "192", lrx: "1266", lry: "1954"}]
+```
 
 
 

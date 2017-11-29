@@ -14,5 +14,14 @@ $movement/string(@xml:id)
 ```
 $movement/string(@label)
 ```
-
+## Example
+XML:
+``` 
+...
+ <mdiv xml:id="edirom_mdiv_ac05b317-fb5b" label="1. Kyrie I">
+ ...
+``` 
+JSON Result/Output: 
+```            
+{id: "edirom_mdiv_ac05b317-fb5b", name: "1. Kyrie I"}
 
