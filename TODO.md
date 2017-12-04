@@ -1,10 +1,8 @@
 ### No examples found:
 2. backend: Plugins, Image LibrarySelection
 3. customizing: WindowManagment, Language
-4. help
 5. objecttype: audioobject, htmlobject
-6. relations: inline, concordances
-7. search
+6. relations: inline
 
 ---------
 
@@ -49,6 +47,5 @@
 15. objecttype: noteobject/facsimileView/pageBasedView/displayMenu: layers
 
 ---------
-relation: inLine ?
 
 
